@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Pizza icon">
+  <defs>
+    <linearGradient id="crust" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D08B3A"/>
+      <stop offset="100%" stop-color="#B96E2B"/>
+    </linearGradient>
+    <linearGradient id="cheese" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD86B"/>
+      <stop offset="100%" stop-color="#FFC645"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M8 12 Q32 2 56 12 L32 60 Z" fill="url(#cheese)"/>
+  <path d="M8 12 Q32 2 56 12 L52 18 Q32 9 12 18 Z" fill="url(#crust)"/>
+
+  <circle cx="24" cy="28" r="4" fill="#C0392B"/>
+  <circle cx="38" cy="34" r="4" fill="#C0392B"/>
+  <circle cx="30" cy="43" r="4" fill="#C0392B"/>
+
+  <path d="M20 36 C22 33, 25 33, 27 36" stroke="#5E8C3A" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M34 26 C36 23, 39 23, 41 26" stroke="#5E8C3A" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

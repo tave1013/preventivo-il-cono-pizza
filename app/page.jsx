@@ -17,14 +17,14 @@ const plans = [
     disclaimer: "Il canone mensile copre manutenzione tecnica e operatività del sistema. Qualsiasi modifica a contenuti, copy, automazioni o landing page è extra e viene preventivata separatamente.",
     summary: "Costruiamo la tua identità digitale da zero: dominio, email professionale, pagina di acquisizione contatti e primo sistema automatico di benvenuto. Il cliente ti trova, ti scrive, riceve la promozione — tutto senza che tu faccia nulla a mano.",
     once_includes: [
-      { label: "Registrazione e configurazione dominio", sub: "Scelta e acquisto del dominio, configurazione DNS, impostazione record di posta e collegamento all'hosting. Tutto operativo in 24 ore.", icon: "🌐" },
-      { label: "Email professionale aziendale", sub: "Configurazione di uno o più indirizzi email professionali come info@ o ordini@, con firma digitale e autenticazione anti-spam completa.", icon: "📧" },
-      { label: "Configurazione hosting e ambiente di produzione", sub: "Messa online della pagina su infrastruttura cloud professionale, HTTPS attivo, caricamento veloce e monitoraggio uptime automatico.", icon: "🖥️" },
-      { label: "Squeeze page di acquisizione contatti", sub: "Realizzazione della pagina con headline persuasiva, copy scritto da noi, form di iscrizione, social proof e chiamata all'azione ottimizzata per mobile.", icon: "📄" },
-      { label: "Email automatica di benvenuto con coupon", sub: "Appena il cliente lascia la sua email riceve in pochi secondi il coupon promozionale, con testo personalizzato e messaggio scritto per convertire.", icon: "🎁" },
-      { label: "Configurazione piattaforma di email marketing", sub: "Creazione account, lista contatti, collegamento del form, autenticazione del dominio di invio e test completi di deliverability prima della pubblicazione.", icon: "⚙️" },
-      { label: "SEO base on-page", sub: "Ottimizzazione di title, meta description, struttura heading, velocità della pagina e collegamento agli strumenti di monitoraggio della ricerca organica.", icon: "🔍" },
-      { label: "Ottimizzazione scheda attività locale", sub: "Verifica o rivendicazione della scheda, compilazione completa di orari, descrizione, categorie, attributi, foto e primo aggiornamento di presentazione.", icon: "📍" },
+      { label: "Registrazione e configurazione dominio", sub: "Scegliamo insieme il dominio migliore, gestiamo acquisto e configurazioni tecniche, colleghiamo tutto correttamente e ti consegniamo una base digitale pronta in tempi rapidi.", icon: "🌐" },
+      { label: "Email professionale aziendale", sub: "Impostiamo caselle professionali (es. info@, ordini@), firma coerente con il brand e protezioni anti-spam, così comunichi in modo serio e affidabile fin dal primo contatto.", icon: "📧" },
+      { label: "Configurazione hosting e ambiente di produzione", sub: "Mettiamo online il progetto su infrastruttura stabile e veloce, con HTTPS e monitoraggio: il tuo sito resta accessibile e performante quando i clienti ti cercano.", icon: "🖥️" },
+      { label: "Squeeze page di acquisizione contatti", sub: "Costruiamo una pagina pensata per convertire: messaggio chiaro, struttura persuasiva, form semplice e CTA forte, ottimizzata anche per chi naviga da mobile.", icon: "📄" },
+      { label: "Email automatica di benvenuto con coupon", sub: "Scriviamo e configuriamo una risposta automatica immediata con coupon: il cliente riceve valore subito e tu aumenti le probabilità di prima visita o riacquisto.", icon: "🎁" },
+      { label: "Configurazione piattaforma di email marketing", sub: "Prepariamo account, liste, form, autenticazioni e test di invio: dietro le quinte facciamo il lavoro tecnico necessario per garantire consegna e tracciamento corretti.", icon: "⚙️" },
+      { label: "SEO base on-page", sub: "Ottimizziamo struttura e contenuti essenziali della pagina per farti trovare meglio: title, meta, gerarchia testi, performance e collegamenti agli strumenti di analisi.", icon: "🔍" },
+      { label: "Ottimizzazione scheda attività locale", sub: "Sistemiamo la tua presenza locale con dati completi e coerenti (orari, descrizione, categorie, foto, menù e primo aggiornamento), per aumentare fiducia e richieste reali.", icon: "📍" },
     ],
     monthly_includes: [
       { label: "Gestione infrastruttura tecnica", sub: "Rinnovo dominio e hosting, aggiornamenti di sicurezza, monitoraggio uptime h24 e backup periodico della pagina.", icon: "🔄" },
@@ -126,13 +126,46 @@ const costBreakdownData = {
   ],
 };
 
+const supportPackages = {
+  starter: {
+    title: "Modalità di lavoro & assistenza inclusa",
+    badge: "Supporto base incluso",
+    points: [
+      "Affiancamento operativo in avvio: non vieni lasciato solo durante il setup.",
+      "Supporto WhatsApp in orario lavorativo per dubbi pratici e richieste veloci.",
+      "Indicazioni chiare, passo-passo, per aiutarti a usare subito il sistema.",
+    ],
+  },
+  plus: {
+    title: "Modalità di lavoro & assistenza inclusa",
+    badge: "Supporto prioritario incluso",
+    points: [
+      "Assistenza WhatsApp prioritaria con tempi di risposta più rapidi.",
+      "Supporto strategico e operativo continuo per decisioni e ottimizzazioni.",
+      "Presenza costante del team: ti seguiamo in modo proattivo, non reattivo.",
+    ],
+  },
+  top: {
+    title: "Modalità di lavoro & assistenza inclusa",
+    badge: "Supporto prioritario incluso",
+    points: [
+      "Assistenza WhatsApp prioritaria con tempi di risposta più rapidi.",
+      "Supporto strategico e operativo continuo per decisioni e ottimizzazioni.",
+      "Presenza costante del team: ti seguiamo in modo proattivo, non reattivo.",
+    ],
+  },
+};
+
 export default function Preventivo() {
   const [active, setActive] = useState("plus");
   const [showCosts, setShowCosts] = useState(false);
   const [tab, setTab] = useState("once");
+  const [showContactModal, setShowContactModal] = useState(false);
 
   const plan = plans.find((p) => p.id === active);
   const costs = costBreakdownData[active] || [];
+  const support = supportPackages[active] || supportPackages.starter;
+  const whatsappUrl = `https://wa.me/393471234567?text=${encodeURIComponent("Ciao Eric, ho qualche dubbio sul preventivo e vorrei un confronto rapido.")}`;
 
   return (
     <div style={{ fontFamily: "'Georgia', serif", background: "#FAFAF8", minHeight: "100vh", padding: "0" }}>
@@ -259,6 +292,20 @@ export default function Preventivo() {
           <div style={{ background: "#fff", borderRadius: 12, padding: "4px 16px 8px", border: "1px solid #E8E8E4" }}>
             <div style={{ fontSize: 12, color: "#999", padding: "10px 0 6px", textTransform: "uppercase", letterSpacing: 1, fontFamily: "'DM Sans', sans-serif", fontWeight: 600 }}>
               Incluso nel setup · pagato una volta
+            </div>
+            <div style={{ margin: "4px 0 8px", padding: "12px 12px", background: plan.bg, border: `1px solid ${plan.border}`, borderRadius: 10 }}>
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 8, alignItems: "center" }}>
+                <div style={{ fontSize: 13, color: plan.color, fontWeight: 700, fontFamily: "'DM Sans', sans-serif" }}>{support.title}</div>
+                <span style={{ fontSize: 11, color: "#fff", background: plan.color, borderRadius: 999, padding: "4px 8px", fontFamily: "'DM Sans', sans-serif", whiteSpace: "nowrap" }}>{support.badge}</span>
+              </div>
+              <div style={{ marginTop: 8 }}>
+                {support.points.map((point, i) => (
+                  <div key={i} style={{ display: "flex", gap: 8, marginBottom: i === support.points.length - 1 ? 0 : 6 }}>
+                    <span style={{ color: plan.color, fontSize: 13 }}>•</span>
+                    <span style={{ fontSize: 12.5, color: "#555", lineHeight: 1.55, fontFamily: "'DM Sans', sans-serif" }}>{point}</span>
+                  </div>
+                ))}
+              </div>
             </div>
             {plan.once_includes.map((item, i) => (
               <div key={i} className="check-item">
@@ -405,7 +452,69 @@ export default function Preventivo() {
           </div>
         </div>
 
+        {/* FOOTER */}
+        <footer style={{ marginTop: 16, background: "#fff", border: "1px solid #E8E8E4", borderRadius: 12, padding: "14px 16px", textAlign: "center" }}>
+          <div style={{ fontSize: 12, color: "#999", textTransform: "uppercase", letterSpacing: 1, fontFamily: "'DM Sans', sans-serif", fontWeight: 600 }}>
+            QuiWeb · Preventivo professionale
+          </div>
+          <div style={{ marginTop: 6, fontSize: 13, color: "#666", fontFamily: "'DM Sans', sans-serif", lineHeight: 1.6 }}>
+            Proposta personalizzata per Il Cono Pizza di Busto Arsizio · Assistenza operativa e supporto continuo inclusi.
+          </div>
+        </footer>
+
       </div>
+
+      {/* FLOATING WHATSAPP */}
+      <div style={{ position: "fixed", right: 16, bottom: 18, zIndex: 60, display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 8 }}>
+        <button
+          onClick={() => setShowContactModal(true)}
+          style={{
+            background: "#25D366",
+            color: "#fff",
+            border: "none",
+            borderRadius: 999,
+            padding: "10px 14px",
+            cursor: "pointer",
+            boxShadow: "0 10px 24px rgba(37,211,102,0.28)",
+            fontSize: 13,
+            fontWeight: 700,
+            fontFamily: "'DM Sans', sans-serif",
+            minHeight: 44,
+          }}
+        >
+          💬 Ciao, sono Eric
+        </button>
+      </div>
+
+      {showContactModal && (
+        <div
+          onClick={() => setShowContactModal(false)}
+          style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.34)", zIndex: 70, display: "flex", alignItems: "flex-end", justifyContent: "center", padding: 12 }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{ width: "100%", maxWidth: 420, background: "#fff", borderRadius: 18, border: "1px solid #ECECEC", padding: "14px 14px 12px", boxShadow: "0 22px 50px rgba(0,0,0,0.16)" }}
+          >
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
+              <div style={{ fontSize: 15, fontWeight: 700, color: "#1C1C1C", fontFamily: "'DM Sans', sans-serif" }}>Supporto rapido su WhatsApp</div>
+              <button onClick={() => setShowContactModal(false)} style={{ border: "none", background: "transparent", cursor: "pointer", fontSize: 20, lineHeight: 1, color: "#999", minWidth: 36, minHeight: 36 }}>×</button>
+            </div>
+
+            <p style={{ margin: 0, fontSize: 13, color: "#666", lineHeight: 1.6, fontFamily: "'DM Sans', sans-serif" }}>
+              Ciao, sono Eric. Se hai dubbi o domande sul preventivo, o vuoi una versione ancora più su misura, scrivimi pure direttamente: sarò felice di aiutarti.
+            </p>
+
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              style={{ marginTop: 12, display: "inline-flex", alignItems: "center", justifyContent: "center", width: "100%", minHeight: 44, borderRadius: 12, background: "#25D366", color: "#fff", textDecoration: "none", fontSize: 14, fontWeight: 700, fontFamily: "'DM Sans', sans-serif" }}
+            >
+              Apri WhatsApp
+            </a>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
