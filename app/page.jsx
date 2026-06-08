@@ -74,7 +74,7 @@ const plans = [
     color: "#2A4E8C",
     bg: "#EBF1FB",
     border: "#B5D4F4",
-    once: "1.800",
+    once: "1.500",
     monthly: "490",
     highlight: false,
     badge: "Full service",
