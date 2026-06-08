@@ -15,7 +15,7 @@ const plans = [
     highlight: false,
     badge: null,
     disclaimer: "Il canone mensile copre manutenzione tecnica e operatività del sistema. Qualsiasi modifica a contenuti, copy, automazioni o landing page è extra e viene preventivata separatamente.",
-    summary: "Costruiamo la tua identità digitale da zero: dominio, email professionale, pagina di acquisizione contatti e primo sistema automatico di benvenuto. Il cliente ti trova, ti scrive, riceve la promozione — tutto senza che tu faccia nulla a mano.",
+    summary: "Costruiamo la tua identità digitale da zero: dominio, email professionale, pagina di acquisizione contatti e primo sistema automatico di benvenuto. Il cliente ti trova, ti scrive, riceve la promozione. Tutto senza che tu faccia nulla a mano.",
     once_includes: [
       { label: "Registrazione e configurazione dominio", sub: "Scegliamo insieme il dominio migliore, gestiamo acquisto e configurazioni tecniche, colleghiamo tutto correttamente e ti consegniamo una base digitale pronta in tempi rapidi.", icon: "🌐" },
       { label: "Email professionale aziendale", sub: "Impostiamo caselle professionali (es. info@, ordini@), firma coerente con il brand e protezioni anti-spam, così comunichi in modo serio e affidabile fin dal primo contatto.", icon: "📧" },
@@ -54,7 +54,7 @@ const plans = [
       { label: "Automazioni CRM avanzate", sub: "Configuriamo riattivazione a 30 giorni, email di compleanno, segmentazione dei contatti in gruppi chiari e notifiche interne per i lead più interessanti.", icon: "🤖" },
       { label: "Pannello CRM su misura", sub: "Dashboard personalizzata accessibile da browser per consultare contatti, aperture email, coupon utilizzati e segmenti attivi in modo semplice.", icon: "📊" },
       { label: "SEO avanzato + ottimizzazione per ricerche intelligenti", sub: "Struttura semantica, dati locali, ottimizzazione per risultati evoluti di ricerca e rafforzamento della presenza nei risultati informativi.", icon: "🔍" },
-      { label: "Gestione presenza locale e portali di ordinazione", sub: "Ottimizziamo la scheda attività locale e i principali profili esterni con foto, descrizioni, menù, offerte e linee guida per la risposta alle recensioni.", icon: "📍" },
+      { label: "Gestione presenza locale e portali di ordinazione", sub: "Ottimizziamo la tua presenza sui principali siti dove i clienti ti cercano già (max 3 piattaforme da concordare insieme, es. Google My Business, Tripadvisor, Deliveroo): foto, descrizione, menù, offerte e linee guida per rispondere alle recensioni.", icon: "📍" },
       { label: "Copywriting completo", sub: "Scriviamo tutti i testi del progetto: pagina, sequenza email, oggetti, call to action, descrizioni profilo e messaggi promozionali.", icon: "✍️" },
     ],
     monthly_includes: [
@@ -79,12 +79,12 @@ const plans = [
     highlight: false,
     badge: "Full service",
     disclaimer: "Il canone mensile include tutti i servizi del piano. Sono incluse fino a 4 modifiche mensili a contenuti e copy esistenti. Nuove landing page, nuove sequenze email complete o nuovi funnel sono extra e vengono preventivati separatamente.",
-    summary: "Il pacchetto per chi vuole affidare tutto a noi: gestiamo le campagne pubblicitarie, attiviamo l'automazione sui social per acquisire lead in modo passivo e curiamo ogni canale online con continuità. Tu ti occupi della pizza — noi del resto.",
+    summary: "Il pacchetto per chi vuole affidare tutto a noi: gestiamo le campagne pubblicitarie, attiviamo l'automazione sui social per acquisire lead in modo passivo e curiamo ogni canale online con continuità. Tu ti occupi della pizza, noi del resto.",
     once_includes: [
       { label: "Tutto il piano Plus", sub: "Infrastruttura, funnel email completo, CRM, ottimizzazione della ricerca, presenza locale e copywriting sono già inclusi.", icon: "✅" },
-      { label: "Automazione conversazionale sui social", sub: "Quando un utente commenta una parola chiave sotto un contenuto riceve in automatico un messaggio privato con l'offerta e viene registrato come contatto.", icon: "🤖" },
+      { label: "Automazione conversazionale sui social", sub: "Configuriamo e testiamo automazioni basate su parole chiave: chi commenta o interagisce riceve in automatico un messaggio privato con l'offerta e viene registrato come contatto. Collaboriamo con la tua social media manager per ottimizzare i flussi, abbassare il costo di acquisizione e sfruttare al massimo ogni canale social, migliorando continuamente il sistema nel tempo.", icon: "🤖" },
       { label: "Integrazione social → sistema email marketing", sub: "I contatti acquisiti dai canali social entrano automaticamente nella lista, vengono segmentati e ricevono il percorso di nurturing senza lavoro manuale.", icon: "🔗" },
-      { label: "Setup campagne pubblicitarie a pagamento", sub: "Impostiamo tre campagne iniziali: notorietà, acquisizione contatti e retargeting, con tracciamento completo e pubblici personalizzati. Budget escluso.", icon: "📱" },
+      { label: "Setup campagne pubblicitarie a pagamento", sub: "Creiamo e lanciamo le prime campagne (notorietà, acquisizione contatti, retargeting) con tracciamento completo e pubblici personalizzati. Definiamo insieme alla tua social media manager la strategia pubblicitaria, per ottimizzare ogni euro del budget e ottenere il massimo ritorno possibile. Budget escluso e gestito direttamente dal cliente.", icon: "📱" },
       { label: "Creazione materiale creativo per le campagne", sub: "Prepariamo testi promozionali, angoli di comunicazione e brief creativo per i visual delle prime campagne incluse nel setup.", icon: "🎨" },
       { label: "Gestione strategica presenza locale", sub: "Aggiorniamo offerte, recensioni, menù e contenuti informativi sui principali canali esterni con un'impostazione strategica pronta da mantenere ogni mese.", icon: "📍" },
     ],
@@ -126,6 +126,27 @@ const costBreakdownData = {
   ],
 };
 
+const serviceProfiles = {
+  starter: {
+    icon: "🚀",
+    badge: "Avvio autonomo",
+    headline: "Ti costruiamo la base, poi sei autonomo. Ma non sei mai solo.",
+    body: "Questo piano è pensato per chi vuole avere il suo sistema online funzionante senza doversi occupare delle parti tecniche. Ci occupiamo noi di tutto il setup: dalla registrazione del dominio alla pagina pronta, fino all'email automatica. Tu ricevi le credenziali, una guida chiara su come gestire i contenuti e il nostro supporto nei primi passi. Il tuo focus rimane sul locale, noi facciamo partire il motore.",
+  },
+  plus: {
+    icon: "🎯",
+    badge: "Presenza gestita",
+    headline: "Noi gestiamo tutto. Tu pensi al locale.",
+    body: "Questo piano è per chi vuole una presenza digitale curata in modo continuo, senza dover pensare a nulla. Ogni mese aggiorniamo i tuoi profili online, rispondiamo alle recensioni, teniamo in ordine orari e chiusure, gestiamo Deliveroo e le altre piattaforme, aggiungiamo o rimuoviamo voci quando serve. Foto nuove, offerte stagionali, novità sul menù: pensiamo noi a comunicarle nel modo giusto. Il risultato è una presenza professionale e sempre aggiornata, che lavora per te anche quando sei in cucina.",
+  },
+  top: {
+    icon: "🎯",
+    badge: "Presenza gestita",
+    headline: "Noi gestiamo tutto. Tu pensi al locale.",
+    body: "Questo piano è per chi vuole una presenza digitale curata in modo continuo, senza dover pensare a nulla. Ogni mese aggiorniamo i tuoi profili online, rispondiamo alle recensioni, teniamo in ordine orari e chiusure, gestiamo Deliveroo e le altre piattaforme, aggiungiamo o rimuoviamo voci quando serve. Foto nuove, offerte stagionali, novità sul menù: pensiamo noi a comunicarle nel modo giusto. Il risultato è una presenza professionale e sempre aggiornata, che lavora per te anche quando sei in cucina.",
+  },
+};
+
 const supportPackages = {
   starter: {
     title: "Modalità di lavoro & assistenza inclusa",
@@ -165,7 +186,8 @@ export default function Preventivo() {
   const plan = plans.find((p) => p.id === active);
   const costs = costBreakdownData[active] || [];
   const support = supportPackages[active] || supportPackages.starter;
-  const whatsappUrl = `https://wa.me/393471234567?text=${encodeURIComponent("Ciao Eric, ho qualche dubbio sul preventivo e vorrei un confronto rapido.")}`;
+  const serviceProfile = serviceProfiles[active] || serviceProfiles.starter;
+  const whatsappUrl = `https://wa.me/393914272540?text=${encodeURIComponent("Ciao Eric, ho qualche dubbio sul preventivo e vorrei un confronto rapido.")}`;
 
   return (
     <div style={{ fontFamily: "'Georgia', serif", background: "#FAFAF8", minHeight: "100vh", padding: "0" }}>
@@ -189,9 +211,10 @@ export default function Preventivo() {
       {/* HEADER */}
       <div style={{ background: "#1C1C1C", padding: "28px 24px 24px", textAlign: "center" }}>
         <div style={{ fontSize: 12, color: "#888", letterSpacing: 2, textTransform: "uppercase", marginBottom: 8, fontFamily: "'DM Sans', sans-serif" }}>Proposta commerciale</div>
-        <h1 className="serif" style={{ fontSize: 30, color: "#fff", fontWeight: 400, marginBottom: 6 }}>
-          🍕 Il Cono Pizza di Busto Arsizio
+        <h1 className="serif" style={{ fontSize: 30, color: "#fff", fontWeight: 400, marginBottom: 4 }}>
+          🍕 Il Cono Pizza
         </h1>
+        <div style={{ fontSize: 13, color: "#666", fontFamily: "'DM Sans', sans-serif", marginBottom: 10 }}>Via Isonzo, 22, 21052 Busto Arsizio VA</div>
         <p style={{ fontSize: 14, color: "#888", fontFamily: "'DM Sans', sans-serif", maxWidth: 420, margin: "0 auto" }}>
           Tre piani per costruire la tua presenza digitale e trasformare follower in clienti ricorrenti.
         </p>
@@ -293,6 +316,17 @@ export default function Preventivo() {
             <div style={{ fontSize: 12, color: "#999", padding: "10px 0 6px", textTransform: "uppercase", letterSpacing: 1, fontFamily: "'DM Sans', sans-serif", fontWeight: 600 }}>
               Incluso nel setup · pagato una volta
             </div>
+            <div style={{ margin: "4px 0 8px", padding: "14px 14px", background: "#1C1C1C", borderRadius: 10, display: "flex", gap: 12, alignItems: "flex-start" }}>
+              <span style={{ fontSize: 26, flexShrink: 0, marginTop: 2 }}>{serviceProfile.icon}</span>
+              <div style={{ flex: 1 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", gap: 8, alignItems: "center", marginBottom: 6 }}>
+                  <div style={{ fontSize: 13, color: "#fff", fontWeight: 700, fontFamily: "'DM Sans', sans-serif" }}>Cosa prevede il pacchetto {plan.name}?</div>
+                  <span style={{ fontSize: 11, color: "#1C1C1C", background: plan.color, borderRadius: 999, padding: "4px 9px", fontFamily: "'DM Sans', sans-serif", whiteSpace: "nowrap", fontWeight: 700 }}>{serviceProfile.badge}</span>
+                </div>
+                <div style={{ fontSize: 13, color: plan.color, fontWeight: 700, fontFamily: "'DM Serif Display', serif", marginBottom: 8, fontStyle: "italic", lineHeight: 1.4 }}>{serviceProfile.headline}</div>
+                <p style={{ fontSize: 12.5, color: "#bbb", lineHeight: 1.65, fontFamily: "'DM Sans', sans-serif", margin: 0 }}>{serviceProfile.body}</p>
+              </div>
+            </div>
             <div style={{ margin: "4px 0 8px", padding: "12px 12px", background: plan.bg, border: `1px solid ${plan.border}`, borderRadius: 10 }}>
               <div style={{ display: "flex", justifyContent: "space-between", gap: 8, alignItems: "center" }}>
                 <div style={{ fontSize: 13, color: plan.color, fontWeight: 700, fontFamily: "'DM Sans', sans-serif" }}>{support.title}</div>
@@ -379,7 +413,7 @@ export default function Preventivo() {
             </div>
             {plan.not_included.map((item, i) => (
               <div key={i} className="not-inc">
-                <span style={{ color: "#ccc", fontSize: 14 }}>✕</span>
+                <span style={{ color: "#E53E3E", fontSize: 14 }}>✕</span>
                 <span style={{ fontFamily: "'DM Sans', sans-serif" }}>{item}</span>
               </div>
             ))}
@@ -389,7 +423,7 @@ export default function Preventivo() {
                   Vuoi queste funzionalità?
                 </div>
                 <div style={{ fontSize: 13, color: "#666", fontFamily: "'DM Sans', sans-serif" }}>
-                  Sono incluse nel piano {plan.id === "starter" ? "Plus o Premium" : "Premium"}. Puoi fare upgrade in qualsiasi momento — il lavoro già fatto non si butta.
+                  Sono incluse nel piano {plan.id === "starter" ? "Plus o Premium" : "Premium"}. Puoi fare upgrade in qualsiasi momento, il lavoro già fatto non si butta.
                 </div>
               </div>
             )}
@@ -403,7 +437,7 @@ export default function Preventivo() {
           </div>
           {[
             { icon: "📌", text: "Il budget delle campagne pubblicitarie è sempre separato e gestito direttamente dal cliente. Non è mai incluso nei piani." },
-            { icon: "🔄", text: "Upgrade possibile in qualsiasi momento. Il lavoro già svolto non viene mai rifatto — si costruisce sopra." },
+            { icon: "🔄", text: "Upgrade possibile in qualsiasi momento. Il lavoro già svolto non viene mai rifatto, si costruisce sopra." },
             { icon: "🔒", text: "Tutti i dati (lista email, dominio, account) restano di proprietà del cliente al 100%." },
             { icon: "📃", text: "Il canone mensile ha durata minima di 3 mesi, poi è rinnovabile mese per mese con preavviso di 30 giorni." },
           ].map((n, i) => (
@@ -452,6 +486,15 @@ export default function Preventivo() {
           </div>
         </div>
 
+        {/* BOX OBIETTIVO FINALE */}
+        <div style={{ marginTop: 14, padding: "14px 14px", background: "#FFFBEA", border: "1px solid #F5E97A", borderRadius: 12, display: "flex", gap: 12, alignItems: "flex-start" }}>
+          <span style={{ fontSize: 26, flexShrink: 0, marginTop: 2 }}>⭐</span>
+          <div>
+            <div style={{ fontSize: 13, fontWeight: 700, color: "#92700A", fontFamily: "'DM Sans', sans-serif", marginBottom: 6 }}>L'obiettivo finale, indipendentemente dal piano scelto</div>
+            <p style={{ fontSize: 12.5, color: "#6B5500", lineHeight: 1.68, fontFamily: "'DM Sans', sans-serif", margin: 0 }}>Costruire un sistema che lavora per te ogni giorno: acquisire nuovi clienti, mantenere una presenza online curata e coerente su tutte le piattaforme (testi, grafica, video e informazioni sempre aggiornate) e garantire una risposta tempestiva a ogni messaggio. Un'unica macchina ben oliata fatta di automazioni, gestione dei profili, email marketing e supporto costante. Lavoriamo in stretta collaborazione con tutte le figure che già supportano la tua attivita: fotografa, social media manager, grafico, titolare e chiunque altro faccia parte del team. Tutti con un unico obiettivo condiviso. Seleziona il piano che fa per te e iniziamo a costruire le basi digitali della tua attivita.</p>
+          </div>
+        </div>
+
         {/* FOOTER */}
         <footer style={{ marginTop: 16, background: "#fff", border: "1px solid #E8E8E4", borderRadius: 12, padding: "14px 16px", textAlign: "center" }}>
           <div style={{ fontSize: 12, color: "#999", textTransform: "uppercase", letterSpacing: 1, fontFamily: "'DM Sans', sans-serif", fontWeight: 600 }}>
@@ -482,7 +525,7 @@ export default function Preventivo() {
             minHeight: 44,
           }}
         >
-          💬 Ciao, sono Eric
+          💬 Hai qualche dubbio?
         </button>
       </div>
 
@@ -501,7 +544,7 @@ export default function Preventivo() {
             </div>
 
             <p style={{ margin: 0, fontSize: 13, color: "#666", lineHeight: 1.6, fontFamily: "'DM Sans', sans-serif" }}>
-              Ciao, sono Eric. Se hai dubbi o domande sul preventivo, o vuoi una versione ancora più su misura, scrivimi pure direttamente: sarò felice di aiutarti.
+              Ciao, sono Eric! Sono qui per te: se hai dubbi, domande sul preventivo o vuoi qualcosa di ancora più su misura per la tua attività, non esitare a scrivermi. Sarò felice di aiutarti!
             </p>
 
             <a
