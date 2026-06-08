@@ -145,9 +145,9 @@ const serviceProfiles = {
   },
   top: {
     icon: "🎯",
-    badge: "Presenza gestita",
-    headline: "Noi gestiamo tutto. Tu pensi al locale.",
-    body: "Questo piano è per chi vuole una presenza digitale curata in modo continuo, senza dover pensare a nulla. Ogni mese aggiorniamo i tuoi profili online, rispondiamo alle recensioni, teniamo in ordine orari e chiusure, gestiamo Deliveroo e le altre piattaforme, aggiungiamo o rimuoviamo voci quando serve. Foto nuove, offerte stagionali, novità sul menù: pensiamo noi a comunicarle nel modo giusto. Il risultato è una presenza professionale e sempre aggiornata, che lavora per te anche quando sei in cucina.",
+    badge: "Full service",
+    headline: "Affida tutto a noi. Tu gestisci il locale.",
+    body: "Questo piano è per chi vuole una strategia completa e gestita in modo professionale. Non solo gestiamo la tua presenza digitale, ma attiviamo anche campagne pubblicitarie, automazioni social passive e un sito web dedicato. Il nostro team lavora proattivamente per acquisire clienti, mantiene tutti i canali aggiornati e ottimizza continuamente ogni leva. Tu ricevi i report mensili, noi facciamo tutto il lavoro. È il nostro livello massimo di servizio.",
   },
 };
 
@@ -172,11 +172,11 @@ const supportPackages = {
   },
   top: {
     title: "Modalità di lavoro & assistenza inclusa",
-    badge: "Supporto prioritario incluso",
+    badge: "Supporto full-service",
     points: [
-      "Assistenza WhatsApp prioritaria con tempi di risposta più rapidi.",
-      "Supporto strategico e operativo continuo per decisioni e ottimizzazioni.",
-      "Presenza costante del team: ti seguiamo in modo proattivo, non reattivo.",
+      "Account manager dedicato: un punto di riferimento fisso per strategie e decisioni importanti.",
+      "Assistenza WhatsApp prioritaria con risposta entro 2 ore in orario lavorativo.",
+      "Riunioni mensili per rivedere risultati, analizzare dati e pianificare i prossimi passi strategici.",
     ],
   },
 };
@@ -473,9 +473,7 @@ export default function Preventivo() {
             ["Automazione conversazionale social", false, false, true],
             ["Gestione campagne pubblicitarie", false, false, true],
             ["Gestione presenza locale mensile", false, false, true],
-            ["1 newsletter mensile", true, true, false],
-            ["2 newsletter mensili incluse", false, false, true],
-            ["Email mensile personalizzata", false, false, true],
+            ["2 newsletter mensili + email personalizzata", false, false, true],
           ].map(([label, s, p, t], i) => (
             <div key={i} style={{ display: "flex", alignItems: "center", padding: "6px 0", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
               <span style={{ flex: 1, fontSize: 12.5, color: "#aaa", fontFamily: "'DM Sans', sans-serif" }}>{label}</span>
