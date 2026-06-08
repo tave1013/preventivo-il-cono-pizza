@@ -467,10 +467,15 @@ export default function Preventivo() {
             ["Automazioni avanzate (win-back, birthday)", false, true, true],
             ["Newsletter mensile inclusa", false, true, true],
             ["SEO avanzato + ricerca evoluta", false, true, true],
+            ["Sito web completo con menu e foto", false, false, true],
+            ["SEO locale per ricerche locali", false, false, true],
+            ["Modulo contatti, chat e prenotazioni", false, false, true],
             ["Automazione conversazionale social", false, false, true],
             ["Gestione campagne pubblicitarie", false, false, true],
             ["Gestione presenza locale mensile", false, false, true],
+            ["1 newsletter mensile", true, true, false],
             ["2 newsletter mensili incluse", false, false, true],
+            ["Email mensile personalizzata", false, false, true],
           ].map(([label, s, p, t], i) => (
             <div key={i} style={{ display: "flex", alignItems: "center", padding: "6px 0", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
               <span style={{ flex: 1, fontSize: 12.5, color: "#aaa", fontFamily: "'DM Sans', sans-serif" }}>{label}</span>
