@@ -210,6 +210,14 @@ export default function Preventivo() {
         .cost-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 12px; }
         .cost-row:last-child { border-bottom: none; }
         .tool-tag { display: inline-block; padding: 3px 9px; border-radius: 20px; font-size: 11px; background: rgba(0,0,0,0.06); color: #555; margin: 2px; font-family: 'DM Sans', sans-serif; }
+        .price-line { display: block; line-height: 1.2; }
+        @media (max-width: 500px) {
+          h1 { font-size: 26px !important; }
+          .plan-btn { padding: 12px 8px !important; }
+          .tab-btn { font-size: 11.5px !important; padding: 7px 5px !important; }
+          .check-item { gap: 8px; padding: 8px 0; }
+          .price-line { font-size: 11px; }
+        }
       `}</style>
 
       {/* HEADER */}
@@ -219,7 +227,7 @@ export default function Preventivo() {
           🍕 Il Cono Pizza
         </h1>
         <div style={{ fontSize: 13, color: "#666", fontFamily: "'DM Sans', sans-serif", marginBottom: 10 }}>Via Isonzo, 22, 21052 Busto Arsizio VA</div>
-        <p style={{ fontSize: 14, color: "#888", fontFamily: "'DM Sans', sans-serif", maxWidth: 420, margin: "0 auto" }}>
+        <p style={{ fontSize: 14, color: "#888", fontFamily: "'DM Sans', sans-serif", maxWidth: 420, margin: "0 auto", lineHeight: 1.5 }}>
           Tre piani per costruire la tua presenza digitale e trasformare follower in clienti ricorrenti.
         </p>
       </div>
@@ -247,7 +255,10 @@ export default function Preventivo() {
               </div>
             )}
             <div style={{ fontSize: 17, fontWeight: 600, fontFamily: "'DM Serif Display', serif" }}>{p.name}</div>
-            <div style={{ fontSize: 12, marginTop: 2, opacity: 0.8 }}>€{p.once} + IVA + €{p.monthly}/mese + IVA</div>
+            <div style={{ fontSize: 12, marginTop: 2, opacity: 0.8 }}>
+              <span className="price-line">€{p.once} + IVA</span>
+              <span className="price-line">+ €{p.monthly}/mese</span>
+            </div>
           </button>
         ))}
       </div>
